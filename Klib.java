@@ -1592,8 +1592,7 @@ class Apply extends JPanel  implements ActionListener{
 				System.out.println("DB 연결 완료");
 				Statement dbSt = con.createStatement();
 				System.out.println("JDBC 드라이버가 정상적으로 연결되었습니다.");
-				t_title = s1;
-				String strSql = "SELECT title, bsort FROM book WHERE title='"+t_title+"';";
+				String strSql = "SELECT title, bsort FROM book WHERE title='"+s1+"';";
 				ResultSet rs = dbSt.executeQuery(strSql);
 				while(rs.next()) {
 					t_title = rs.getString("title");
